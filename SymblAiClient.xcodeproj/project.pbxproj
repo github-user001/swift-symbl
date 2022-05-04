@@ -10,16 +10,19 @@
 		40FC75ED2822FEEA00560AEA /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC75EC2822FEEA00560AEA /* Keys.swift */; };
 		40FC75EE2822FEEA00560AEA /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FC75EC2822FEEA00560AEA /* Keys.swift */; };
 		BDD6F221F32059A1EE31AC4F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6F815AD54E7E768B8EE32 /* ContentView.swift */; };
+		BDD6F374E9AB07FBBA09DB0C /* Symbl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6F333AD009199D7153BD0 /* Symbl.swift */; };
 		BDD6F6C335DE7218C0E90521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD6F6962FF3D7AD9B277495 /* Assets.xcassets */; };
 		BDD6F9126A4C4168EE8EFFE0 /* SymblAiClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6FFDEB5F4AF4878082CE1 /* SymblAiClientApp.swift */; };
 		BDD6FA4B56939D77591ACD20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD6F6962FF3D7AD9B277495 /* Assets.xcassets */; };
 		BDD6FBB29D30A53996AF46C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6F815AD54E7E768B8EE32 /* ContentView.swift */; };
 		BDD6FF38A33ED09FE6EE5149 /* SymblAiClientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6FFDEB5F4AF4878082CE1 /* SymblAiClientApp.swift */; };
+		BDD6FFBEA2A3BCF3DAA87A96 /* Symbl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD6F333AD009199D7153BD0 /* Symbl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		40FC75EC2822FEEA00560AEA /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		BDD6F253F845696B28801DE8 /* SymblAiClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SymblAiClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDD6F333AD009199D7153BD0 /* Symbl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Symbl.swift; sourceTree = "<group>"; };
 		BDD6F6962FF3D7AD9B277495 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDD6F815AD54E7E768B8EE32 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BDD6F88C2CC5FB81B6D908AA /* SymblAiClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SymblAiClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +56,14 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		BDD6F1593C8CD772F7FDA3D5 /* Symbl */ = {
+			isa = PBXGroup;
+			children = (
+				BDD6F333AD009199D7153BD0 /* Symbl.swift */,
+			);
+			path = Symbl;
+			sourceTree = "<group>";
+		};
 		BDD6F561E702DCA03FEF6745 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +80,7 @@
 				BDD6FFDEB5F4AF4878082CE1 /* SymblAiClientApp.swift */,
 				BDD6F815AD54E7E768B8EE32 /* ContentView.swift */,
 				40FC75EC2822FEEA00560AEA /* Keys.swift */,
+				BDD6F1593C8CD772F7FDA3D5 /* Symbl */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -177,6 +189,7 @@
 				40FC75ED2822FEEA00560AEA /* Keys.swift in Sources */,
 				BDD6F9126A4C4168EE8EFFE0 /* SymblAiClientApp.swift in Sources */,
 				BDD6F221F32059A1EE31AC4F /* ContentView.swift in Sources */,
+				BDD6FFBEA2A3BCF3DAA87A96 /* Symbl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +200,7 @@
 				40FC75EE2822FEEA00560AEA /* Keys.swift in Sources */,
 				BDD6FF38A33ED09FE6EE5149 /* SymblAiClientApp.swift in Sources */,
 				BDD6FBB29D30A53996AF46C9 /* ContentView.swift in Sources */,
+				BDD6F374E9AB07FBBA09DB0C /* Symbl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
