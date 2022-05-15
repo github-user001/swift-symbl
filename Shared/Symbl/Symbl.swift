@@ -2,15 +2,26 @@
 // Created by laptop on 5/4/22.
 //
 import Foundation
+import Starscream
 import SwiftUI
 
 class Symbl: ObservableObject {
+  
+  var socket: WebSocket!
+  
+  // get the current timer
+  @Published var timer: Timer = .init()
+  // Observe the timer in a text view
+  @Published var timerText: String = ""
+
   @Published
   var session: String = ""
   @Published
   var token: String = ""
   @Published
   var isAuthenticated: Bool = false
+  @Published
+  var isConnected: Bool = false
   @Published
   var error: String = ""
 
@@ -69,5 +80,49 @@ class Symbl: ObservableObject {
         self.isAuthenticated = true
       }
     }
+  }
+    func connect() {
+    print("connect")
+    let randomConnectionId = UUID().uuidString
+
+    var request = URLRequest(url: URL(string: "wss://api.symbl.ai/v1/streaming/\(randomConnectionId)?access_token=\(token)")!)
+    request.timeoutInterval = 5
+    socket = WebSocket(request: request)
+    socket.onEvent = { [self] event in
+      print(event)
+      switch event {
+      case let .connected(headers):
+        print("connected")
+        self.isConnected = true
+        print("websocket is connected: \(headers)")
+      case let .disconnected(reason, code):
+        isConnected = false
+        print("websocket is disconnected: \(reason) with code: \(code)")
+      case let .text(string):
+        print("Received text: \(string)")
+      case let .binary(data):
+        print("Received data: \(data.count)")
+      case .ping:
+        print("Received ping")
+      case .pong:
+        print("Received pong")
+      case .viabilityChanged:
+        print("Viability changed")
+      case .reconnectSuggested:
+        print("Reconnect suggested")
+      case .cancelled:
+        print("Cancelled")
+        isConnected = false
+      case let .error(error):
+        isConnected = false
+        handleError(error)
+      }
+    }
+    socket.connect()
+    print("end of connectedc")
+  }
+
+  func handleError(_ error: Error?) {
+    print(error?.localizedDescription)
   }
 }
